@@ -19,29 +19,47 @@ public class Ejercicio1{
 
          */
 
-        enum Nombres{
-            Alejandra,Leonardo,Rosa,Guillermo,Gabriel,Daniel,Luisa,Ludmila
-        }
-
        String[] nombre=new String[8];
 
         System.out.println("a)");
-        System.out.println("(La primer letra de los nombres empiezan con mayúscula)");
+        System.out.println();
 
         for(int n=0;n<nombre.length;n++){
 
-            boolean valid=false;
-
-            while(!valid){
-                System.out.println("Ingresar un nombre:");
-                nombre[n]=key.next();
-                if(nombre[n].equals(Nombres.values()[n].toString())){
-                    valid=true;
+            if(n==0){
+              nombre[n]="Alejandra";
             }else{
-                    System.out.println("Nombre invalido");
+                if(n==1){
+                    nombre[n]="Leonardo";
+                }else{
+                    if(n==2){
+                        nombre[n]="Rosa";
+                    }else{
+                        if(n==3){
+                            nombre[n]="Guillermo";
+                        }else{
+                            if(n==4){
+                                nombre[n]="Gabriel";
+                            }else{
+                                if(n==5){
+                                    nombre[n]="Daniel";
+                                }else{
+                                    if(n==6){
+                                        nombre[n]="Luisa";
+                                    }else{
+                                        nombre[n]="Ludmila";
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
-
             }
+
+        }
+
+        for(int f=0;f<nombre.length;f++){
+                System.out.print(" "+nombre[f]);
         }
 
     }
