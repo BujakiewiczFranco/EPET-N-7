@@ -87,40 +87,35 @@ public class Ejercicio2{
      System.out.println();
 
 
-     double[][] notas = new double[4][4];
+     double[][] notas=new double[4][4];
 
 
-     for (int f = 0; f < notas.length; f++) {
+     for (int f=0;f<notas.length;f++) {
          System.out.println("Alumno n°"+(f+1));
-         for (int c = 0; c < 3; c++) {
+         for (int c =0;c<3;c++) {
              System.out.println("Nota del trimestre n°" + (c + 1)+":");
-             notas[f][c] = key.nextDouble();
+             notas[f][c]=key.nextDouble();
          }
      }
 
-     for (int f = 0; f < notas.length; f++) {
-         for (int c = 0; c < 3; c++) {
-             notas[f][3] = notas[f][3] + notas[f][c];
-         }
-     }
-
-     for (int f = 0; f < notas.length; f++) {
+     for (int f=0;f<notas.length;f++) {
          for (int c=0;c<3;c++) {
-             notas[f][3] = notas[f][3] + notas[f][c];
+             notas[f][3]=notas[f][3]+notas[f][c];
          }
-
      }
 
-     for (int f = 0; f < notas.length; f++) {
+     for (int f=0;f<notas.length;f++) {
         notas[f][3]=notas[f][3]/3;
      }
 
+     System.out.println("         T1  T2  T3  Pro");
 
      for(int f=0;f<notas.length;f++){
-         System.out.println("Alumno "+(f+1));
+         System.out.print("Alumno "+(f+1));
          for(int c=0;c<notas.length;c++){
              System.out.print(" "+notas[f][c]);
          }
+         System.out.println();
      }
 
  }
